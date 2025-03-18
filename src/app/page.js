@@ -27,7 +27,7 @@ export default function EbookFunnel() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer YOUR_MAILERLITE_API_KEY"
+          "Authorization": "Bearer ${process.env.MAILERLITE_API_KEY}"
         },
         body: JSON.stringify({
           email: email,
@@ -117,7 +117,7 @@ export default function EbookFunnel() {
             <p className="mt-4 text-lg">✔ Embrace the enchantment of intimate rituals</p>
             <p className="text-lg">✔ Deepen emotional &amp; mystical connections</p>
             <p className="text-lg">✔ Discover sacred practices for a passionate, magical life</p>
-            <Button className="mt-4" onClick={() => window.location.href = "YOUR_PAYHIP_LINK"}>
+            <Button className="mt-4" onClick={() => window.location.href = "https://payhip.com/b/poaeC"}>
               Buy The Book - $19.99
             </Button>
           </div>
