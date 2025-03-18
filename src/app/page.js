@@ -141,7 +141,7 @@ export default function EbookFunnel() {
               <p className="text-lg">✔ Deepen both emotional and mystical connections</p>
               <p className="text-lg">✔ Discover sacred practices for a passionate, magical life</p>
               <Button className="mt-4" onClick={() => window.location.href = "https://your-payhip-link.com"}>
-                Buy The Book test- $19.99
+                Buy The Book - $19.99
               </Button>
             </CardContent>
           </Card>
