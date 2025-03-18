@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Button = ({ onClick, children, className }) => (
   <motion.button
@@ -57,7 +58,7 @@ export default function EbookFunnel() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiMjQ2Y2JkNWNhM2QyNjQ1NTUxNWRjYzU3MTA0NmExMjQxODcxOTgwMDczYTc2OGRiMDhiMTRhOTZhZjM3NTY1NTJjM2E4YmMzNmUzZGQ3MDciLCJpYXQiOjE3NDIzMzczNjAuMjA5NTM1LCJuYmYiOjE3NDIzMzczNjAuMjA5NTM4LCJleHAiOjQ4OTgwMTA5NjAuMjAzODQ5LCJzdWIiOiIxNDA3NDU1Iiwic2NvcGVzIjpbXX0.wukGMB3Ox9iRuc1aMLPzIPsOEQtygaAi_1LLl8Omsssy8DzDeO6Wi1risz_eEs4VUUB-t4aTXVi1WOM3TS9dkmhUAsHx7Kh6ponb5-JYY0n1POJXX7ggsFljqaLm6WtM3ZsgOCC2_ZlBHprgQQK4Z5HFMkGDOpamzyHTg8am9QmfXOa892b_ob-jE-UL2KrfaW-BHiTMDjoqqObtIqiki20BT5eThLHBhasPFj9yhFBV2NFJq6VLntPijBEo1qSLRQFzeiwqRp_BHUj278N6Cvr5KgL57UUQfu283L9fFis8vXGxy-hxYtLvqVc65MRw22OIskDnJ8GNSrNnJYX3U9Vk_lAwbbw65T3HaBHUQac8WbSsvrAUvlCZgL0zYuqGnWmA4_qMKYlrf0scDmJWb7m1qGUHBYNJaW3PqeKUpPmtgdgkARDVQGzT8BLnFGOMkLsrXLMfbtBGgkflbT_ss0djJ8n1PEb9ZjDTH2_UnfVgdkVXfaLJRvEBn3F1jeEzhH7w6f0BMON_9V76TMxdCLqhxG_mWO5_GPL8wb7XYz1DPS089OP2asfTHSGSrmOlE65G1cW0kp4HtXeDmxUSw7-YTlDzYL0bdaPZK60YMSFcWEZOkFKUcfzCs7GQ2Qp98rmlb37942mM4DOPW03fFQPl_y3yjLLwfVYnttNNMq0"
+          "Authorization": "Bearer YOUR_MAILERLITE_API_KEY"
         },
         body: JSON.stringify({
           email: email,
@@ -79,18 +80,22 @@ export default function EbookFunnel() {
       </div>
       {!showDetails ? (
         <motion.div className="flex flex-col md:flex-row items-center max-w-5xl w-full relative z-10 space-y-10 md:space-y-0 md:space-x-10 pt-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-          <img 
-            src="/hero-image.png" 
-            alt="A mystical journey into intimate rituals" 
-            className="w-1/2 max-w-lg rounded-xl object-cover md:mr-8 opacity-90 shadow-lg shadow-black/40 -mt-8" 
-            style={{ maskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)" }} 
-          />
+          <div className="w-1/2 max-w-lg md:mr-8 -mt-8">
+            <Image 
+              src="/hero-image.png" 
+              alt="A mystical journey into intimate rituals" 
+              width={500}  // adjust as needed
+              height={500} // adjust as needed
+              className="rounded-xl object-cover opacity-90 shadow-lg shadow-black/40"
+              style={{ maskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)" }}
+            />
+          </div>
           <div className="text-left w-full max-w-lg">
             <h1 className="text-5xl font-serif text-white leading-snug tracking-wide">
               Unlock the Mystical Secrets of Intimate Rituals
             </h1>
             <p className="mt-6 text-xl text-gray-300 leading-relaxed bg-gray-900 p-6 rounded-lg border border-scarlet-500 shadow-lg shadow-black/50">
-              Step into a realm of enchantment where every ritual is infused with magic and desire. In this exclusive preview of <strong>The Ritual of Intimacy</strong>, a mystical guide to intimate rituals, you'll uncover esoteric practices that ignite passion and deepen your soul's connection.
+              Step into a realm of enchantment where every ritual is infused with magic and desire. In this exclusive preview of <strong>The Ritual of Intimacy</strong>, a mystical guide to intimate rituals, you&apos;ll uncover esoteric practices that ignite passion and deepen your soul&apos;s connection.
             </p>
             <div className="mt-6 text-center md:text-left md:ml-8">
               <ul className="mt-4 text-lg text-gray-300">
@@ -125,11 +130,17 @@ export default function EbookFunnel() {
           </p>
           <Card>
             <CardContent>
-              <img src="/mockup.png" alt="The Ritual of Intimacy cover" className="w-full rounded-lg" />
+              <Image 
+                src="/mockup.png" 
+                alt="The Ritual of Intimacy cover" 
+                width={600} 
+                height={800}
+                className="w-full rounded-lg"
+              />
               <p className="mt-4 text-lg">✔ Embrace the enchantment of intimate rituals</p>
               <p className="text-lg">✔ Deepen both emotional and mystical connections</p>
               <p className="text-lg">✔ Discover sacred practices for a passionate, magical life</p>
-              <Button className="mt-4" onClick={() => window.location.href = " https://payhip.com/b/poaeC"}>
+              <Button className="mt-4" onClick={() => window.location.href = "https://your-payhip-link.com"}>
                 Buy The Book - $19.99
               </Button>
             </CardContent>
