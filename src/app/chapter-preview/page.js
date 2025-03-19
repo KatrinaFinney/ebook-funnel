@@ -6,11 +6,20 @@ import { motion } from "framer-motion";
 export default function ChapterPreview() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-6 relative overflow-hidden">
+      {/* Smoke animation background */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ duration: 5, repeat: Infinity, repeatType: "reverse" }}
+        className="absolute inset-0 bg-[url('/smoke-animation.gif')] bg-cover bg-center opacity-30"
+      />
+
+      {/* Main content */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="max-w-3xl text-center"
+        className="max-w-3xl text-center relative z-10"
       >
         <h1 className="text-5xl font-serif mb-8">
           Exclusive Chapter Preview
@@ -30,13 +39,13 @@ export default function ChapterPreview() {
           </p>
           <p>
             This is just the beginning of your journey toward deeper intimacy and greater manifestation power.
-            In the full guide, you'll learn the exact rituals to transform your connection and unleash your
+            In the full guide, you&apos;ll learn the exact rituals to transform your connection and unleash your
             inherent magic.
           </p>
         </div>
 
         <p className="mt-8 text-xl">
-          Ready to experience the full book? 
+          Ready to experience the full book?
           <br />
           <a
             href="https://payhip.com/b/poaeC"

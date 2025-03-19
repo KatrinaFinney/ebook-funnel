@@ -58,23 +58,21 @@ export default function EbookFunnel() {
           {/* Text & Bullet Points */}
           <div className="w-full max-w-lg text-center md:text-left">
             <h1 className="text-5xl font-serif leading-snug tracking-wide">
-              Unlock Sacred Rituals for Orgasmic Manifestation
+              Discover the Rituals to Ignite Passion & Manifest Your Deepest Desires
             </h1>
             <p className="mt-6 text-xl text-gray-300 leading-relaxed bg-gray-900 p-6 rounded-lg border border-scarlet-500 shadow-lg shadow-black/50">
-              Step into a realm where intimacy becomes your most powerful magical practice. 
-              In this exclusive preview of <strong>The Ritual of Intimacy</strong>, you&apos;ll discover potent rituals 
-              that amplify passion, ignite profound pleasure, and harness orgasmic energy to manifest your deepest desires.
+              Step into a realm where intimacy becomes your most powerful magical practice. In this exclusive preview of <strong>The Ritual of Intimacy</strong>, you&apos;ll uncover potent rituals that amplify passion, ignite profound pleasure, and harness orgasmic energy to bring your desires into reality.
             </p>
             <div className="mt-6 md:ml-8 text-lg text-gray-300">
               <ul className="space-y-2">
-                <li>✔️ Learn Sacred Rituals for Passionate Connection</li>
-                <li>✔️ Harness the Power of Orgasmic Manifestation</li>
-                <li>✔️ Amplify Pleasure &amp; Magnetic Attraction</li>
-                <li>✔️ Transform Intimacy into a Mystical Experience</li>
+                <li>✔️ Master Ancient Intimacy Rituals for Lasting Passion</li>
+                <li>✔️ Channel Orgasmic Energy to Fuel Your Manifestation</li>
+                <li>✔️ Deepen Spiritual &amp; Emotional Bonds Instantly</li>
+                <li>✔️ Turn Your Desires into Tangible Realities</li>
               </ul>
               <p className="mt-4">
-                Enter your email below and immediately unlock an exclusive preview into the
-                rituals that will transform your intimacy and amplify your manifestation power.
+                Enter your email below and immediately <strong>claim your free preview</strong> into the
+                practices that will transform your intimacy and supercharge your manifestation.
               </p>
             </div>
 
